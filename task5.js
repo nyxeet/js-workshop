@@ -3,23 +3,23 @@ class Component {
     this.element = { tag: tag, style: { display: "block" } };
   }
   hide() {
-    this.element.style = { display: "none" };
+    this.element.style.display = "none";
   }
 
   show() {
-    this.element.style = { display: "block" };
+    this.element.style.display = "block";
   }
 }
 class Box extends Component {
   constructor(element) {
     super(element.element);
-    this.size = element.size;
+    this.size = { width: element.size, heigth: element.size }
     this.color = element.color;
   }
 
   getProps() {
     console.log(
-      `Element: ${this.element.tag}; Width: ${this.size}; Height: ${this.size}; Background: ${this.color}; Display: ${this.element.style.display}`
+      `Element: ${this.element.tag}; Width: ${this.size.width}; Height: ${this.size.heigth}; Background: ${this.color}; Display: ${this.element.style.display}`
     );
   }
 }

@@ -12,4 +12,4 @@ function func1(...args) {
   return "YES";
 }
 
-console.log(func1("ккт", "ктт"));
+console.log(func1('кот', 'ток', 'окт'));

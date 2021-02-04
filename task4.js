@@ -7,11 +7,8 @@ const students = [
 function sortByGender(students) {
   let result = { male: [], female: [] };
   students.forEach((element) => {
-    if (element.gender == "female") {
-      result.female.push(element);
-    } else {
-      result.male.push(element);
-    }
+    element.gender == "female" ? result.female.push(element)
+    : result.male.push(element);
   });
   return result;
 }

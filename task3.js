@@ -5,10 +5,10 @@ var arr = [
 
 function getObject(array) {
   const newObject = {};
-  for (const element of array) {
+  array.forEach(element => {
     const newArray = Object.values(element);
     newObject[newArray[0]] = newArray[1];
-  }
+  })
   return newObject;
 }
 
